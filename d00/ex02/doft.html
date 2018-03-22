@@ -5,9 +5,75 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 	<style>
-
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 4fr 1fr 1fr;
+            grid-template-rows: 1fr 3fr 1fr;
+            grid-gap: 10px;
+            -webkit-box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+            box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+            background-color: rgba(4, 244, 244, 1);
+        }
+        .header{
+            grid-column: 2 / 5;
+            grid-row: 1;
+            background-color: rgba(144, 144, 144, 1);
+            -webkit-box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+            box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+        }
+        .main{
+            grid-column: 3;
+            grid-row: 2 / 3;
+            text-align: center;
+/*            padding: 1em;*/
+            
+            background-color: rgba(144, 144, 144, 1);
+            
+            -webkit-box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+            box-shadow:inset 10px 10px 10px 10px rgba(0,0,0,0);
+        }
+        .left{
+            
+            grid-row: 2 / 4;
+            grid-column: 2;
+            background-color: rgba(144, 144, 144, 1);
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
+    <div class="wrapper">
+        <header class="header">
+            <img src="ressources/day_of_the_42.png" alt="day_of_the_42.png">
+        </header>
+        <main class="main">
+            <img src="ressources/cluster.jpg" alt="cluster">
+        </main>
+        <aside class="left">
+            <img src="ressources/arrow.png" alt="arrow">
+            <img src="ressources/main.png" alt="main">
+            <img src="ressources/oeil.png" alt="oeil">
+            <img src="ressources/outil.png" alt="outil">
+            <img src="ressources/chat-icon.png" alt="chat-icon">
+        </aside>
+        <aside class="right">
+<!--
+            <img src="ressources/book.png" alt="book">
+            <img src="ressources/towel.png" alt="towel">
+            <img src="ressources/brick.jpg" alt="brick">    
+-->
+        </aside>
+    </div>
 </body>
 </html>
+    
+
+<!--
+grid container
+    grid item
+    grid line
+    grid cell
+    grid track
+    grid area
+    grid gap-->
