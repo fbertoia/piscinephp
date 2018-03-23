@@ -12,7 +12,7 @@
             display: grid;
             grid-template-columns: 1fr 300px 1700px 300px 1fr;
             grid-template-rows: 230px 870px 200px;
-            grid-template-areas: 
+            grid-template-areas:
                 ". header header header ."
                 ". g_left g_main g_right ."
                 ". . g_main . .";
@@ -32,8 +32,8 @@
         }
         .main {
             grid-area: g_main;
-            text-align: center;    
-            
+            text-align: center;
+
         }
         .image_main{
             width: 100%;
@@ -68,7 +68,7 @@
             grid-column: 2;
             grid-row:2;
             width:30px;
-            margin-top:70px;
+            margin-top:40px;
         }
         .left{
             grid-area: g_left;
@@ -126,7 +126,7 @@
         }
         .first_sentence{
             margin-top:2px;
-            font-size: 50px;
+            font-size: 40px;
         }
         .bigger_sentence{
             font-size:100px;
@@ -134,35 +134,60 @@
         .red_shadow{
             text-shadow: 10px 10px 20px red;
         }
+        .formulaire{
+            margin-top:-40px
+        }
+        .champ{
+            width:700px;
+            font-size: 30px;
+        }
+        .bouton{
+            font-size: 30px;
+            margin-top:10px;
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+<!--    x = 277 y = 397-->
+    chair : 1258 870
+            1560 
+    <div class="wrapper"> 
         <div class="header">
             <img class="image_header" src="ressources/day_of_the_42.png" alt="day_of_the_42.png">
             <div class="image_header_right">
-                <img class="image_header_right_loupe" src="ressources/loupe.png" alt="arrow">           <img class="image_header_right_reload" src="ressources/reload.png" alt="reload">
-                <img class="image_header_right_quit" src="ressources/close.gif" alt="close">
+                    <img class="image_header_right_loupe" src="ressources/loupe.png" alt="arrow" title="loupe">
+                <a href="https://www.disney.com" class="image_header_right_reload"><img class="image_header_right_reload" src="ressources/reload.png" alt="reload" title="Recommencer au début"></a>
+                <a href="https://www.relaischateaux.com" class="image_header_right_quit"><img class="image_header_right_quit" src="ressources/close.gif" alt="close" title="close"></a>
             </div>
         </div>
         <div class="main">
-            <img class="image_main" src="ressources/cluster.jpg" alt="cluster">
+            <img class="image_main" src="ressources/cluster.jpg" alt="cluster" title="cluster" usemap="#clusterisation">
+            <div class="links"></div>
+            <map name="clusterisation">
+              <area shape="rect" coords="500,570,780,1200" href="https://www.apple.com" alt="Apple">
+              <area shape="rect" coords="1300,570,1600,950" href="http://www.ikea.com" alt="Ikea">
+            </map>
         </div>
         <div class="left">
-            <img class="image_left" src="ressources/arrow.png" alt="arrow">
-            <img class="image_left" src="ressources/main.png" alt="main">
-            <img class="image_left red" src="ressources/oeil.png" alt="oeil">
-            <img class="image_left" src="ressources/outil.png" alt="outil">
-            <img class="image_left" src="ressources/chat-icon.png" alt="chat-icon">
+            <img class="image_left" src="ressources/arrow.png" alt="Avancer" title="Avancer">
+            <img class="image_left" src="ressources/main.png" alt="Prendre" title="Prendre">
+            <img class="image_left red" src="ressources/oeil.png" alt="Regarder" title="Regarder">
+            <img class="image_left" src="ressources/outil.png" alt="Utiliser" title="Utiliser">
+            <img class="image_left" src="ressources/chat-icon.png" alt="Parler" title="Parler">
         </div>
         <div class="right">
-            <img class="image_right1" src="ressources/book.png" alt="book">
-            <img class="image_right2" src="ressources/towel.png" alt="towel">
-            <div class="image_right3"></div>
+            <img class="image_right1" src="ressources/book.png" alt="book" title="book">
+            <img class="image_right2" src="ressources/towel.png" alt="towel" title="towel">
+            <div class="image_right3" title="brick" alt="brick"></div>
         </div>
         <div class="green_box">
-            <p class="first_sentence">Vous <span class="bigger_sentence">entrez </span>dans une pièce remplie <br>d'<span class="red_shadow">ordinateurs</span>...</p>
-            
+            <p class="first_sentence">Vous <span class="bigger_sentence">entrez </span>dans une grand pièce remplie <br>d'<span class="red_shadow">ordinateurs</span>...<br>- Bonjour, vous êtes nouveau ici?</p>
+            <div id="speakbar">
+                <form action="" class="formulaire">
+                    <input class="champ" type="text" value=""/>
+                    <input class="bouton" type="button" value="Repondre" />
+                </form>
+            </div>
         </div>
     </div>
 </body>
