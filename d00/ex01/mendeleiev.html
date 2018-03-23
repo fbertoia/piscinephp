@@ -19,8 +19,8 @@
             padding:0;
         }
         h1{
-            font-size: 5em;
-            margin-bottom:5em;
+            font-size: 5vw;
+/*            margin-bottom:5em;*/
             font-family: 'Cutive Mono', monospace;
             font-family: 'PT Mono', monospace;
             text-align: center;
@@ -30,22 +30,21 @@
             display: block;
         }
         table{
+            margin:auto;
         }
         tr{
-            width: 100px;
-            height: 100px;
+            width: 1vw;
+            height: 1vw;
 
         }
         td{
-            border: 3px solid black;
+            border: 0.2em solid black;
             position: relative;
-            width:100px;
-            height:100px;
             overflow: hidden;
         }
         div{
-            width: 100px;
-            height: 100px;
+            width: 5vw;
+            height: 5vw;
             -webkit-transition: background 0.2s ease-in;
             -moz-transition: background 0.2s ease-in;
             -ms-transition: background 0.2s ease-in;
@@ -59,35 +58,40 @@
              background-color: royalblue;
         }
         .elem{
-            display: flex;
-            flex-direction: column;
+            display:grid;
+            grid-template-rows: 1vw 3vw 1vw;
+            grid-template-columns: 100%;
+            grid-template-areas:
+                "mass"
+                "symb"
+                "numb";
+        }
+        .elem > * {
+            margin:0;
         }
         .elem_symb{
-            margin: 0px;
-            padding: 4px;
-            font-size: 3em;
-            text-align: center;
+            grid-area: symb;
+            text-align:center;
+            font-size: 2.7vw;
+            margin: auto;
         }
         .elem_numb{
-            margin: 0px;
-            padding: 0px;
-            font-size: 1em;
+            grid-area: mass;
+            font-size: 1vw;
             text-align: right;
         }
         .elem_spec{
-            margin: 0px;
-            padding: 0px;
-            font-size:2.3em;
-            margin-top: 30px;
+            grid-area: symb;
+            font-size:2vw;
             text-align: center;
         }
         .elem_spec_mass{
-            margin-top:9px;
+            grid-area: numb;
+            font-size: 1vw;
         }
         .elem_mass{
-            margin: 0px;
-            padding: 0px;
-            font-size: 1em;
+            grid-area: numb;
+            font-size: 1vw;
             text-align: left;
         }
         .hidden_cells{
