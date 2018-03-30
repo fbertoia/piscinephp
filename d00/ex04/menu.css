@@ -1,0 +1,75 @@
+body{
+    display:block;
+}
+h1{
+    text-align: center;
+    background-color: forestgreen;
+    color:white;
+}
+.first{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4vw;
+    grid-gap: 1vw;
+}
+.menu{
+    list-style-type: none;
+    text-align: center;
+    font-size: 3vw;
+}
+.ingredient{
+    background-color: inherit; 
+    position:relative;
+    border-top:1001px;
+    text-align: center;
+    height:0px;
+    overflow: hidden;
+    -webkit-transition: width 2s, height 2s, background-color 2s;
+    transition: width 2s, height 2s, background-color 2s;
+}
+.ingredient li{
+    padding:0;
+    border: 0;
+    font-size:1em;
+    background-color: inherit;
+    border-color:1px solid black;
+    text-align: left;
+    width:inherit;
+    border-color:solid 1px black;
+}
+.a{
+    grid-column: 1;
+    background-color: darkslategrey;
+    color:white;
+}
+.b{
+    grid-column: 2;
+    background-color: darkgreen;
+    color:white;
+}
+.c{
+    grid-column: 3;
+    background-color: darkolivegreen;
+    color:white;
+}
+.a:hover .ingredient{
+    display: block;
+    height:16vw;
+    background-color: black;
+}
+.b:hover .ingredient{
+    display: block;
+    height:16vw;
+    background-color: black;
+}
+.c:hover .ingredient{
+    display: block;
+    height:16vw;
+    background-color: black;
+}
+img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+}
