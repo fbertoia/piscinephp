@@ -1,7 +1,8 @@
 <?PHP
 function ft_split($str)
 {
-	$arr = explode(' ', $str);
+	$str = trim($str);
+	$arr = preg_split('/ +/', $str);
 	sort($arr);
 	return ($arr);
 }

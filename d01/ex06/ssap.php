@@ -5,6 +5,7 @@ if ($argc == 1)
 $i = 1;
 while ($i < count($argv))
 {
+	$argv[$i] = trim($argv[$i]);
 	$arr = preg_split('/ +/', $argv[$i]);
 	$ret = array_merge($arr, (array)$ret);
 	$i++;

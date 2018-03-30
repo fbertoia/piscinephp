@@ -18,8 +18,7 @@ function sort_ex($str1, $str2)
 			return ($ret1 - $ret2);
 		}
 	}
-	return ($str_a[$i] - $str_b[$i]);
-
+	return (ord($str_a[$i]) - ord($str_b[$i]));
 }
 
 if ($argc == 1)
@@ -27,6 +26,7 @@ if ($argc == 1)
 $i = 1;
 while ($i < count($argv))
 {
+	$argv[$i] = trim($argv[$i]);
 	$arr = preg_split('/ +/', $argv[$i]);
 	$ret = array_merge((array)$ret, $arr);
 	$i++;
