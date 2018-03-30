@@ -4,184 +4,37 @@
 	<title >Day of the 42f</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-	<style>
-        body{
-            background-color: rgba(50, 50, 50, 1);
-        }
-        .wrapper{
-            display: grid;
-            grid-template-columns: 1fr 300px 1700px 300px 1fr;
-            grid-template-rows: 230px 870px 200px;
-            grid-template-areas:
-                ". header header header ."
-                ". g_left g_main g_right ."
-                ". . g_main . .";
-            grid-gap: 2em;
-            margin: 1em;
-        }
-        .wrapper > * {
-            box-shadow: 10px 10px 10px 5px black;
-            border-radius: 10px;
-            background-color: rgba(144, 144, 144, 1);
-            padding: 1em;
-        }
-        .header{
-            grid-area: header;
-            display: flex;
-            flex-direction: row;
-        }
-        .main {
-            grid-area: g_main;
-            text-align: center;
-
-        }
-        .image_main{
-            width: 100%;
-            height: 100%;
-        }
-        .image_header{
-            width: 850px;
-            height: 100%;
-        }
-        .image_header_right{
-            width: 450px;
-            height:100%;
-            margin-left : 1100px;
-            display:grid;
-            grid-template-rows: 90px 1fr;
-            grid-template-columns: 1fr 20px;
-        }
-        .image_header_right_loupe{
-            grid-column: 1;
-            grid-row:2;
-            width:100%;
-            margin-top: -70px;
-            margin-right:70px;
-            margin-left:-80px;
-        }
-        .image_header_right_reload{
-            grid-column: 2;
-            grid-row:1;
-            width:30px;
-        }
-        .image_header_right_quit{
-            grid-column: 2;
-            grid-row:2;
-            width:30px;
-            margin-top:40px;
-        }
-        .left{
-            grid-area: g_left;
-            margin-left:50px;
-            padding-left: 50px;
-
-            display: grid;
-            grid-template-rows: repeat(5, 150px);
-            grid-template-columns: 150px;
-            grid-gap: 0.9em;
-        }
-        .image_left{
-            width: 100%;
-            height: 150px;
-        }
-        .red{
-            border:10px red solid;
-            width: 130px;
-            height: 130px;
-        }
-        .right {
-            grid-area: g_right;
-            margin-right: 50px;
-            padding-left: 50px;
-            display:flex;
-            flex-direction: column;
-        }
-        .image_right1{
-            margin-top:10px;
-            width:145px;
-            height:160px;
-        }
-        .image_right2{
-            margin-left:10px;
-            width:120px;
-            height:100px;
-        }
-        .image_right3{
-            background-image: url("./ressources/brick.jpg");
-            margin-top:20px;
-            margin-left:-28px;
-            padding-right:0px;
-            padding-left:30px;
-            width:180px;
-            height:100px;
-        }
-        .green_box{
-            grid-column: 2;
-            grid-row:3;
-            background-color: rgba(136, 255, 137, 1);
-            width:950px;
-            height: 400px;
-            margin-top: 50px;
-            margin-left: -200px;
-        }
-        .first_sentence{
-            margin-top:2px;
-            font-size: 40px;
-        }
-        .bigger_sentence{
-            font-size:100px;
-        }
-        .red_shadow{
-            text-shadow: 10px 10px 20px red;
-        }
-        .formulaire{
-            margin-top:-40px
-        }
-        .champ{
-            width:700px;
-            font-size: 30px;
-        }
-        .bouton{
-            font-size: 30px;
-            margin-top:10px;
-        }
-    </style>
+	<link rel="stylesheet" type="text/css" href="doft.css">
 </head>
 <body>
-<!--    x = 277 y = 397-->
-    chair : 1258 870
-            1560 
     <div class="wrapper"> 
         <div class="header">
-            <img class="image_header" src="ressources/day_of_the_42.png" alt="day_of_the_42.png">
+            <img class="image_header" src="resources/day_of_the_42.png" alt="day_of_the_42.png" title="day-of-the-42">
             <div class="image_header_right">
-                    <img class="image_header_right_loupe" src="ressources/loupe.png" alt="arrow" title="loupe">
-                <a href="https://www.disney.com" class="image_header_right_reload"><img class="image_header_right_reload" src="ressources/reload.png" alt="reload" title="Recommencer au début"></a>
-                <a href="https://www.relaischateaux.com" class="image_header_right_quit"><img class="image_header_right_quit" src="ressources/close.gif" alt="close" title="close"></a>
+                    <img class="image_header_right_loupe" src="resources/loupe.png" alt="arrow" title="loupe">
+                <a href="https://www.disney.com" class="image_header_right_reload"><img class="image_header_right_reload" src="resources/reload.png" alt="reload" title="Recommencer au début"></a>
+                <a href="https://www.relaischateaux.com" class="image_header_right_quit"><img class="image_header_right_quit" src="resources/close.gif" alt="close" title="Déconnecter"></a>
             </div>
         </div>
         <div class="main">
-            <img class="image_main" src="ressources/cluster.jpg" alt="cluster" title="cluster" usemap="#clusterisation">
-            <div class="links"></div>
-            <map name="clusterisation">
-              <area shape="rect" coords="500,570,780,1200" href="https://www.apple.com" alt="Apple">
-              <area shape="rect" coords="1300,570,1600,950" href="http://www.ikea.com" alt="Ikea">
-            </map>
+            <img class="image_main" src="resources/cluster.jpg" alt="cluster" title="cluster">
+            <a style="display:block" href="http://www.ikea.com"><div class="ikea"></div></a>
+            <a style="display:block" href="https://www.apple.com"><div class="apple"></div></a>
         </div>
         <div class="left">
-            <img class="image_left" src="ressources/arrow.png" alt="Avancer" title="Avancer">
-            <img class="image_left" src="ressources/main.png" alt="Prendre" title="Prendre">
-            <img class="image_left red" src="ressources/oeil.png" alt="Regarder" title="Regarder">
-            <img class="image_left" src="ressources/outil.png" alt="Utiliser" title="Utiliser">
-            <img class="image_left" src="ressources/chat-icon.png" alt="Parler" title="Parler">
+            <img class="image_left" src="resources/arrow.png" alt="Avancer" title="Avancer">
+            <img class="image_left" src="resources/main.png" alt="Prendre" title="Prendre">
+            <img class="image_left red" src="resources/oeil.png" alt="Regarder" title="Regarder">
+            <img class="image_left" src="resources/outil.png" alt="Utiliser" title="Utiliser">
+            <img class="image_left" src="resources/chat-icon.png" alt="Parler" title="Parler">
         </div>
         <div class="right">
-            <img class="image_right1" src="ressources/book.png" alt="book" title="book">
-            <img class="image_right2" src="ressources/towel.png" alt="towel" title="towel">
+            <img class="image_right1" src="resources/book.png" alt="book" title="book">
+            <img class="image_right2" src="resources/towel.png" alt="towel" title="towel">
             <div class="image_right3" title="brick" alt="brick"></div>
         </div>
         <div class="green_box">
-            <p class="first_sentence">Vous <span class="bigger_sentence">entrez </span>dans une grand pièce remplie <br>d'<span class="red_shadow">ordinateurs</span>...<br>- Bonjour, vous êtes nouveau ici?</p>
+			<p class="first_sentence">Vous <span class="bigger_sentence">entrez</span> alors dans une grand pièce remplie <br>d'<span class="red_shadow">ordinateurs</span>...<br><span style="font-style:italic ; font-family: Sans-Serif;">- Bonjour, vous êtes nouveau ici?</span></p>
             <div id="speakbar">
                 <form action="" class="formulaire">
                     <input class="champ" type="text" value=""/>
@@ -192,12 +45,3 @@
     </div>
 </body>
 </html>
-
-<!--
-grid container
-    grid item
-    grid line
-    grid cell
-    grid track
-    grid area
-    grid gap-->

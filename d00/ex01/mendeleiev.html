@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|PT+Mono" rel="stylesheet">
 	<title >Mendeleïev Array</title>
-    
+
 	<style>
+        * {
+			margin: 0px;
+			padding: 0px;
+        }
         body{
             background-color:grey;
             background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b3/Mendeleiev.png");
             background-repeat: no-repeat;
             background-size:cover;
             background-attachment: fixed;
+            background-position: center;
             width:100vw;
             height:100vh;
-            margin:0;
-            padding:0;
         }
         h1{
-            font-size: 3em;
+            font-size: 3vw;
             font-family: 'Cutive Mono', monospace;
             font-family: 'PT Mono', monospace;
             text-align: center;
@@ -29,75 +32,54 @@
             display: block;
         }
         table{
+            width:90%;
+			margin-left:5%;
+			margin-right:5%;
+            border-spacing: 0.1vw;
         }
         tr{
-            width: 100px;
-            height: 100px;
-
         }
         td{
-            border: 3px solid black;
-            position: relative;
-            width:100px;
-            height:100px;
-            overflow: hidden;
+            border: 0.1vw solid black;
+            width:1%;
+            height:1%;
+			-webkit-transition: background 0.2s ease-in;
+			-moz-transition: background 0.2s ease-in;
+			-ms-transition: background 0.2s ease-in;
+			-o-transition: background 0.2s ease-in;
+			transition: background 0.2s ease-in;
         }
-        div{
-            width: 100px;
-            height: 100px;
-            -webkit-transition: background 0.2s ease-in;
-            -moz-transition: background 0.2s ease-in;
-            -ms-transition: background 0.2s ease-in;
-            -o-transition: background 0.2s ease-in;
-            transition: background 0.2s ease-in;
-        }
-        div:hover{
+        td:hover{
             background-color: royalblue;
         }
-        div.red:hover {
-             background-color: royalblue;
-        }
-        .elem{
-            display: flex;
-            flex-direction: column;
-        }
         .elem_symb{
-            margin: 0px;
-            padding: 4px;
-            font-size: 3em;
+            font-size:2vw;
             text-align: center;
         }
         .elem_numb{
-            margin: 0px;
-            padding: 0px;
-            font-size: 1em;
             text-align: right;
+            font-size: 1vw;
+        }
+        .elem_mass{
+            font-size: 1vw;
+            text-align:left;
         }
         .elem_spec{
-            margin: 0px;
-            padding: 0px;
-            font-size:2.3em;
-            margin-top: 30px;
+            font-size:1.5vw;
             text-align: center;
         }
         .elem_spec_mass{
-            margin-top:9px;
-        }
-        .elem_mass{
-            margin: 0px;
-            padding: 0px;
-            font-size: 1em;
-            text-align: left;
+            text-align: center;
+            font-size:1vw;
         }
         .hidden_cells{
-            border:0;
-        }
+            height:2vw;
+            border:0;        }
         .color_red{
             background-color: rgba(112, 13, 1, 0.5);
         }
         .color_white{
             background-color: rgba(255, 240, 240, 0.5);
-
         }
         .color_green{
             background-color: rgba(100, 140, 140, 12);
@@ -121,873 +103,631 @@
 </head>
 <body>
     <h1>Mendeleiev Table</h1>
-
     <table>
         <tr>
-            <td>
-				<div class="elem color_green" contenteditable>
-					<p class="elem_numb">1,00794</p>
-					<p class="elem_symb">H</p>
-					<p class="elem_mass">1</p>
-				</div>
+            <td class="elem color_green" contenteditable>
+				<p class="elem_numb">1,00794</p>
+				<p class="elem_symb">H</p>
+				<p class="elem_mass">1</p>
 			</td>
             <td colspan="16" class="hidden_cells"></td>
-			<td>
-				<div class="elem color_purple" contenteditable>
-					<p class="elem_numb">4,002602</p>
-					<p class="elem_symb">He</p>
-					<p class="elem_mass">2</p>
-				</div>
+			<td class="elem color_purple" contenteditable>
+				<p class="elem_numb">4,002602</p>
+				<p class="elem_symb">He</p>
+				<p class="elem_mass">2</p>
 			</td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white" contenteditable>
-					<p class="elem_numb">6,941</p>
-					<p class="elem_symb">Li</p>
-					<p class="elem_mass">3</p>
-				</div>
+			<td class="elem color_white" contenteditable>
+				<p class="elem_numb">6,941</p>
+				<p class="elem_symb">Li</p>
+				<p class="elem_mass">3</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">9,012182</p>
-					<p class="elem_symb">Be</p>
-					<p class="elem_mass">4</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">9,012182</p>
+				<p class="elem_symb">Be</p>
+				<p class="elem_mass">4</p>
 			</td>
             <td colspan="10" class="hidden_cells"></td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">10,811</p>
-					<p class="elem_symb">B</p>
-					<p class="elem_mass">5</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">10,811</p>
+				<p class="elem_symb">B</p>
+				<p class="elem_mass">5</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">12,011</p>
-					<p class="elem_symb">C</p>
-					<p class="elem_mass">6</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">12,011</p>
+				<p class="elem_symb">C</p>
+				<p class="elem_mass">6</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">14,00674</p>
-					<p class="elem_symb">N</p>
-					<p class="elem_mass">7</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">14,00674</p>
+				<p class="elem_symb">N</p>
+				<p class="elem_mass">7</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">15,9994</p>
-					<p class="elem_symb">O</p>
-					<p class="elem_mass">8</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">15,9994</p>
+				<p class="elem_symb">O</p>
+				<p class="elem_mass">8</p>
 			</td>
-			<td>
-				<div class="elem color_dark"  contenteditable>
-					<p class="elem_numb">18,9984032</p>
-					<p class="elem_symb">F</p>
-					<p class="elem_mass">9</p>
-				</div>
+			<td class="elem color_dark"  contenteditable>
+				<p class="elem_numb">18,9984032</p>
+				<p class="elem_symb">F</p>
+				<p class="elem_mass">9</p>
 			</td>
-			<td>
-				<div class="elem color_purple"  contenteditable>
-					<p class="elem_numb">20,1797</p>
-					<p class="elem_symb">Ne</p>
-					<p class="elem_mass">10</p>
-				</div>
+			<td class="elem color_purple"  contenteditable>
+				<p class="elem_numb">20,1797</p>
+				<p class="elem_symb">Ne</p>
+				<p class="elem_mass">10</p>
 			</td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white"  contenteditable>
-					<p class="elem_numb">22,989768</p>
-					<p class="elem_symb">Na</p>
-					<p class="elem_mass">11</p>
-				</div>
+			<td class="elem color_white"  contenteditable>
+				<p class="elem_numb">22,989768</p>
+				<p class="elem_symb">Na</p>
+				<p class="elem_mass">11</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">24,305</p>
-					<p class="elem_symb">Mg</p>
-					<p class="elem_mass">12</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">24,305</p>
+				<p class="elem_symb">Mg</p>
+				<p class="elem_mass">12</p>
 			</td>
             <td colspan="10" class="hidden_cells"></td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">26,981539</p>
-					<p class="elem_symb">Al</p>
-					<p class="elem_mass">13</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">26,981539</p>
+				<p class="elem_symb">Al</p>
+				<p class="elem_mass">13</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">28,0855</p>
-					<p class="elem_symb">Si</p>
-					<p class="elem_mass">14</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">28,0855</p>
+				<p class="elem_symb">Si</p>
+				<p class="elem_mass">14</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">30,973762</p>
-					<p class="elem_symb">P</p>
-					<p class="elem_mass">15</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">30,973762</p>
+				<p class="elem_symb">P</p>
+				<p class="elem_mass">15</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">32,066</p>
-					<p class="elem_symb">S</p>
-					<p class="elem_mass">16</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">32,066</p>
+				<p class="elem_symb">S</p>
+				<p class="elem_mass">16</p>
 			</td>
-			<td>
-				<div class="elem color_dark"  contenteditable>
-					<p class="elem_numb">35,4527</p>
-					<p class="elem_symb">Cl</p>
-					<p class="elem_mass">17</p>
-				</div>
+			<td class="elem color_dark"  contenteditable>
+				<p class="elem_numb">35,4527</p>
+				<p class="elem_symb">Cl</p>
+				<p class="elem_mass">17</p>
 			</td>
-			<td>
-				<div class="elem color_purple"  contenteditable>
-					<p class="elem_numb">39,948</p>
-					<p class="elem_symb">Ar</p>
-					<p class="elem_mass">18</p>
-				</div>
+			<td class="elem color_purple"  contenteditable>
+				<p class="elem_numb">39,948</p>
+				<p class="elem_symb">Ar</p>
+				<p class="elem_mass">18</p>
 			</td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white"  contenteditable>
-					<p class="elem_numb">39,0983</p>
-					<p class="elem_symb">K</p>
-					<p class="elem_mass">19</p>
-				</div>
+			<td class="elem color_white"  contenteditable>
+				<p class="elem_numb">39,0983</p>
+				<p class="elem_symb">K</p>
+				<p class="elem_mass">19</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">40,078</p>
-					<p class="elem_symb">Ca</p>
-					<p class="elem_mass">20</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">40,078</p>
+				<p class="elem_symb">Ca</p>
+				<p class="elem_mass">20</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">44,95591</p>
-					<p class="elem_symb">Sc</p>
-					<p class="elem_mass">21</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">44,95591</p>
+				<p class="elem_symb">Sc</p>
+				<p class="elem_mass">21</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">47,88</p>
-					<p class="elem_symb">Ti</p>
-					<p class="elem_mass">22</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">47,88</p>
+				<p class="elem_symb">Ti</p>
+				<p class="elem_mass">22</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">50,9415</p>
-					<p class="elem_symb">V</p>
-					<p class="elem_mass">23</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">50,9415</p>
+				<p class="elem_symb">V</p>
+				<p class="elem_mass">23</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">51,9961</p>
-					<p class="elem_symb">Cr</p>
-					<p class="elem_mass">24</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">51,9961</p>
+				<p class="elem_symb">Cr</p>
+				<p class="elem_mass">24</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">54,93805</p>
-					<p class="elem_symb">Mn</p>
-					<p class="elem_mass">25</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">54,93805</p>
+				<p class="elem_symb">Mn</p>
+				<p class="elem_mass">25</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">55,847</p>
-					<p class="elem_symb">Fe</p>
-					<p class="elem_mass">26</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">55,847</p>
+				<p class="elem_symb">Fe</p>
+				<p class="elem_mass">26</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">58,9332</p>
-					<p class="elem_symb">Co</p>
-					<p class="elem_mass">27</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">58,9332</p>
+				<p class="elem_symb">Co</p>
+				<p class="elem_mass">27</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">58,69</p>
-					<p class="elem_symb">Ni</p>
-					<p class="elem_mass">28</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">58,69</p>
+				<p class="elem_symb">Ni</p>
+				<p class="elem_mass">28</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">63,546</p>
-					<p class="elem_symb">Cu</p>
-					<p class="elem_mass">29</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">63,546</p>
+				<p class="elem_symb">Cu</p>
+				<p class="elem_mass">29</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">65,39</p>
-					<p class="elem_symb">Zn</p>
-					<p class="elem_mass">30</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">65,39</p>
+				<p class="elem_symb">Zn</p>
+				<p class="elem_mass">30</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">69,723</p>
-					<p class="elem_symb">Ga</p>
-					<p class="elem_mass">31</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">69,723</p>
+				<p class="elem_symb">Ga</p>
+				<p class="elem_mass">31</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">72,61</p>
-					<p class="elem_symb">Ge</p>
-					<p class="elem_mass">32</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">72,61</p>
+				<p class="elem_symb">Ge</p>
+				<p class="elem_mass">32</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">74,92159</p>
-					<p class="elem_symb">As</p>
-					<p class="elem_mass">33</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">74,92159</p>
+				<p class="elem_symb">As</p>
+				<p class="elem_mass">33</p>
 			</td>
-			<td>
-				<div class="elem color_feeshy"  contenteditable>
-					<p class="elem_numb">78,96</p>
-					<p class="elem_symb">Se</p>
-					<p class="elem_mass">34</p>
-				</div>
+			<td class="elem color_feeshy"  contenteditable>
+				<p class="elem_numb">78,96</p>
+				<p class="elem_symb">Se</p>
+				<p class="elem_mass">34</p>
 			</td>
-			<td>
-				<div class="elem color_dark"  contenteditable>
-					<p class="elem_numb">79,904</p>
-					<p class="elem_symb">Br</p>
-					<p class="elem_mass">35</p>
-				</div>
+			<td class="elem color_dark"  contenteditable>
+				<p class="elem_numb">79,904</p>
+				<p class="elem_symb">Br</p>
+				<p class="elem_mass">35</p>
 			</td>
-			<td>
-				<div class="elem color_purple"  contenteditable>
-					<p class="elem_numb">83,8</p>
-					<p class="elem_symb">Kr</p>
-					<p class="elem_mass">36</p>
-				</div>
+			<td class="elem color_purple"  contenteditable>
+				<p class="elem_numb">83,8</p>
+				<p class="elem_symb">Kr</p>
+				<p class="elem_mass">36</p>
             </td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white"  contenteditable>
-					<p class="elem_numb">85,4678</p>
-					<p class="elem_symb">Rb</p>
-					<p class="elem_mass">37</p>
-				</div>
+			<td class="elem color_white"  contenteditable>
+				<p class="elem_numb">85,4678</p>
+				<p class="elem_symb">Rb</p>
+				<p class="elem_mass">37</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">87,62</p>
-					<p class="elem_symb">Sr</p>
-					<p class="elem_mass">38</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">87,62</p>
+				<p class="elem_symb">Sr</p>
+				<p class="elem_mass">38</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">88,90585</p>
-					<p class="elem_symb">Y</p>
-					<p class="elem_mass">39</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">88,90585</p>
+				<p class="elem_symb">Y</p>
+				<p class="elem_mass">39</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">91,224</p>
-					<p class="elem_symb">Zr</p>
-					<p class="elem_mass">40</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">91,224</p>
+				<p class="elem_symb">Zr</p>
+				<p class="elem_mass">40</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">92,90638</p>
-					<p class="elem_symb">Nb</p>
-					<p class="elem_mass">41</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">92,90638</p>
+				<p class="elem_symb">Nb</p>
+				<p class="elem_mass">41</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">95,94</p>
-					<p class="elem_symb">Mo</p>
-					<p class="elem_mass">42</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">95,94</p>
+				<p class="elem_symb">Mo</p>
+				<p class="elem_mass">42</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">98,9063</p>
-					<p class="elem_symb">Tc</p>
-					<p class="elem_mass">43</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">98,9063</p>
+				<p class="elem_symb">Tc</p>
+				<p class="elem_mass">43</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">101,07</p>
-					<p class="elem_symb">Ru</p>
-					<p class="elem_mass">44</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">101,07</p>
+				<p class="elem_symb">Ru</p>
+				<p class="elem_mass">44</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">102,9055</p>
-					<p class="elem_symb">Rh</p>
-					<p class="elem_mass">45</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">102,9055</p>
+				<p class="elem_symb">Rh</p>
+				<p class="elem_mass">45</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">106,42</p>
-					<p class="elem_symb">Pd</p>
-					<p class="elem_mass">46</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">106,42</p>
+				<p class="elem_symb">Pd</p>
+				<p class="elem_mass">46</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">107,8682</p>
-					<p class="elem_symb">Ag</p>
-					<p class="elem_mass">47</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">107,8682</p>
+				<p class="elem_symb">Ag</p>
+				<p class="elem_mass">47</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">112,411</p>
-					<p class="elem_symb">Cd</p>
-					<p class="elem_mass">48</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">112,411</p>
+				<p class="elem_symb">Cd</p>
+				<p class="elem_mass">48</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">114,82</p>
-					<p class="elem_symb">In</p>
-					<p class="elem_mass">49</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">114,82</p>
+				<p class="elem_symb">In</p>
+				<p class="elem_mass">49</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">118,71</p>
-					<p class="elem_symb">Sn</p>
-					<p class="elem_mass">50</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">118,71</p>
+				<p class="elem_symb">Sn</p>
+				<p class="elem_mass">50</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">121,75</p>
-					<p class="elem_symb">Sb</p>
-					<p class="elem_mass">51</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">121,75</p>
+				<p class="elem_symb">Sb</p>
+				<p class="elem_mass">51</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">127,6</p>
-					<p class="elem_symb">Te</p>
-					<p class="elem_mass">52</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">127,6</p>
+				<p class="elem_symb">Te</p>
+				<p class="elem_mass">52</p>
 			</td>
-			<td>
-				<div class="elem color_dark"  contenteditable>
-					<p class="elem_numb">126,90447</p>
-					<p class="elem_symb">I</p>
-					<p class="elem_mass">53</p>
-				</div>
+			<td class="elem color_dark"  contenteditable>
+				<p class="elem_numb">126,90447</p>
+				<p class="elem_symb">I</p>
+				<p class="elem_mass">53</p>
 			</td>
-			<td>
-				<div class="elem color_purple"  contenteditable>
-					<p class="elem_numb">131,29</p>
-					<p class="elem_symb">Xe</p>
-					<p class="elem_mass">54</p>
-				</div>
+			<td class="elem color_purple"  contenteditable>
+				<p class="elem_numb">131,29</p>
+				<p class="elem_symb">Xe</p>
+				<p class="elem_mass">54</p>
 			</td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white"  contenteditable>
-					<p class="elem_numb">132,90543</p>
-					<p class="elem_symb">Cs</p>
-					<p class="elem_mass">55</p>
-				</div>
+			<td class="elem color_white"  contenteditable>
+				<p class="elem_numb">132,90543</p>
+				<p class="elem_symb">Cs</p>
+				<p class="elem_mass">55</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">137,327</p>
-					<p class="elem_symb">Ba</p>
-					<p class="elem_mass">56</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">137,327</p>
+				<p class="elem_symb">Ba</p>
+				<p class="elem_mass">56</p>
 			</td>
-            <td>
-                <div class="elem color_beige"  contenteditable>
-					<p class="elem_spec">La-Lu</p>
-					<p class="elem_spec_mass">57-71</p>
-				</div>
+        <td class="elem color_beige"  contenteditable>
+                <p class="elem_spec">La-Lu</p>
+				<p class="elem_spec_mass">57-71</p>
             </td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">178,49</p>
-					<p class="elem_symb">Hf</p>
-					<p class="elem_mass">72</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">178,49</p>
+				<p class="elem_symb">Hf</p>
+				<p class="elem_mass">72</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">180,9479</p>
-					<p class="elem_symb">Ta</p>
-					<p class="elem_mass">73</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">180,9479</p>
+				<p class="elem_symb">Ta</p>
+				<p class="elem_mass">73</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">183,85</p>
-					<p class="elem_symb">W</p>
-					<p class="elem_mass">74</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">183,85</p>
+				<p class="elem_symb">W</p>
+				<p class="elem_mass">74</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">186,207</p>
-					<p class="elem_symb">Re</p>
-					<p class="elem_mass">75</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">186,207</p>
+				<p class="elem_symb">Re</p>
+				<p class="elem_mass">75</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">190,2</p>
-					<p class="elem_symb">Os</p>
-					<p class="elem_mass">76</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">190,2</p>
+				<p class="elem_symb">Os</p>
+				<p class="elem_mass">76</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">192,22</p>
-					<p class="elem_symb">Ir</p>
-					<p class="elem_mass">77</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">192,22</p>
+				<p class="elem_symb">Ir</p>
+				<p class="elem_mass">77</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">195,08</p>
-					<p class="elem_symb">Pt</p>
-					<p class="elem_mass">78</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">195,08</p>
+				<p class="elem_symb">Pt</p>
+				<p class="elem_mass">78</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">196,96654</p>
-					<p class="elem_symb">Au</p>
-					<p class="elem_mass">79</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">196,96654</p>
+				<p class="elem_symb">Au</p>
+				<p class="elem_mass">79</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">200,59</p>
-					<p class="elem_symb">Hg</p>
-					<p class="elem_mass">80</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">200,59</p>
+				<p class="elem_symb">Hg</p>
+				<p class="elem_mass">80</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">204,3833</p>
-					<p class="elem_symb">Tl</p>
-					<p class="elem_mass">81</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">204,3833</p>
+				<p class="elem_symb">Tl</p>
+				<p class="elem_mass">81</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">207,2</p>
-					<p class="elem_symb">Pb</p>
-					<p class="elem_mass">82</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">207,2</p>
+				<p class="elem_symb">Pb</p>
+				<p class="elem_mass">82</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">208,98037</p>
-					<p class="elem_symb">Bi</p>
-					<p class="elem_mass">83</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">208,98037</p>
+				<p class="elem_symb">Bi</p>
+				<p class="elem_mass">83</p>
 			</td>
-			<td>
-				<div class="elem color_green"  contenteditable>
-					<p class="elem_numb">208,9824</p>
-					<p class="elem_symb">Po</p>
-					<p class="elem_mass">84</p>
-				</div>
+			<td class="elem color_green"  contenteditable>
+				<p class="elem_numb">208,9824</p>
+				<p class="elem_symb">Po</p>
+				<p class="elem_mass">84</p>
 			</td>
-			<td>
-				<div class="elem color_dark"  contenteditable>
-					<p class="elem_numb">209,9871</p>
-					<p class="elem_symb">At</p>
-					<p class="elem_mass">85</p>
-				</div>
+			<td class="elem color_dark"  contenteditable>
+				<p class="elem_numb">209,9871</p>
+				<p class="elem_symb">At</p>
+				<p class="elem_mass">85</p>
 			</td>
-			<td>
-				<div class="elem color_purple"  contenteditable>
-					<p class="elem_numb">222,0176</p>
-					<p class="elem_symb">Rn</p>
-					<p class="elem_mass">86</p>
-				</div>
+			<td class="elem color_purple"  contenteditable>
+				<p class="elem_numb">222,0176</p>
+				<p class="elem_symb">Rn</p>
+				<p class="elem_mass">86</p>
 			</td>
         </tr>
         <tr>
-			<td>
-				<div class="elem color_white"  contenteditable>
-					<p class="elem_numb">223,0197</p>
-					<p class="elem_symb">Fr</p>
-					<p class="elem_mass">87</p>
-				</div>
+			<td class="elem color_white"  contenteditable>
+				<p class="elem_numb">223,0197</p>
+				<p class="elem_symb">Fr</p>
+				<p class="elem_mass">87</p>
 			</td>
-			<td>
-				<div class="elem color_red"  contenteditable>
-					<p class="elem_numb">226,0254</p>
-					<p class="elem_symb">Ra</p>
-					<p class="elem_mass">88</p>
-				</div>
+			<td class="elem color_red"  contenteditable>
+				<p class="elem_numb">226,0254</p>
+				<p class="elem_symb">Ra</p>
+				<p class="elem_mass">88</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_spec">Ac-Lr</p>
-					<p class="elem_spec_mass">89-103</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_spec">Ac-Lr</p>
+				<p class="elem_spec_mass">89-103</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">261,1087</p>
-					<p class="elem_symb">Rf</p>
-					<p class="elem_mass">104</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">261,1087</p>
+				<p class="elem_symb">Rf</p>
+				<p class="elem_mass">104</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">262,1138</p>
-					<p class="elem_symb">Db</p>
-					<p class="elem_mass">105</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">262,1138</p>
+				<p class="elem_symb">Db</p>
+				<p class="elem_mass">105</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">263,1182</p>
-					<p class="elem_symb">Sg</p>
-					<p class="elem_mass">106</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">263,1182</p>
+				<p class="elem_symb">Sg</p>
+				<p class="elem_mass">106</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">262,1229</p>
-					<p class="elem_symb">Bh</p>
-					<p class="elem_mass">107</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">262,1229</p>
+				<p class="elem_symb">Bh</p>
+				<p class="elem_mass">107</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">265</p>
-					<p class="elem_symb">Hs</p>
-					<p class="elem_mass">108</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">265</p>
+				<p class="elem_symb">Hs</p>
+				<p class="elem_mass">108</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">266</p>
-					<p class="elem_symb">Mt</p>
-					<p class="elem_mass">109</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">266</p>
+				<p class="elem_symb">Mt</p>
+				<p class="elem_mass">109</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">269</p>
-					<p class="elem_symb">Ds</p>
-					<p class="elem_mass">110</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">269</p>
+				<p class="elem_symb">Ds</p>
+				<p class="elem_mass">110</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">272</p>
-					<p class="elem_symb">Rg</p>
-					<p class="elem_mass">111</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">272</p>
+				<p class="elem_symb">Rg</p>
+				<p class="elem_mass">111</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">277</p>
-					<p class="elem_symb">Cn</p>
-					<p class="elem_mass">112</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">277</p>
+				<p class="elem_symb">Cn</p>
+				<p class="elem_mass">112</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2004</p>
-					<p class="elem_symb">Nh</p>
-					<p class="elem_mass">113</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">286</p>
+				<p class="elem_symb">Nh</p>
+				<p class="elem_mass">113</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2004</p>
-					<p class="elem_symb">Fl</p>
-					<p class="elem_mass">114</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">289</p>
+				<p class="elem_symb">Fl</p>
+				<p class="elem_mass">114</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2010</p>
-					<p class="elem_symb">Mc</p>
-					<p class="elem_mass">115</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">290</p>
+				<p class="elem_symb">Mc</p>
+				<p class="elem_mass">115</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2004</p>
-					<p class="elem_symb">Lv</p>
-					<p class="elem_mass">116</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">293</p>
+				<p class="elem_symb">Lv</p>
+				<p class="elem_mass">116</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2010</p>
-					<p class="elem_symb">Ts</p>
-					<p class="elem_mass">117</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">294</p>
+				<p class="elem_symb">Ts</p>
+				<p class="elem_mass">117</p>
 			</td>
-			<td>
-				<div class="elem color_blue"  contenteditable>
-					<p class="elem_numb">2006</p>
-					<p class="elem_symb">Og</p>
-					<p class="elem_mass">118</p>
-				</div>
-			</td>
-        </tr>
-        <tr style="max-width:1px">
-            <td colspan="3" class="hidden_cells" style="max-width:1px"></td>
-        </tr>
-        <tr>
-            <td colspan="3" class="hidden_cells"></td>
-            <td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">138,9055</p>
-					<p class="elem_symb">La</p>
-					<p class="elem_mass">57</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">140,115</p>
-					<p class="elem_symb">Ce</p>
-					<p class="elem_mass">58</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">140,90765</p>
-					<p class="elem_symb">Pr</p>
-					<p class="elem_mass">59</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">144,24</p>
-					<p class="elem_symb">Nd</p>
-					<p class="elem_mass">60</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">146,9151</p>
-					<p class="elem_symb">Pm</p>
-					<p class="elem_mass">61</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">150,36</p>
-					<p class="elem_symb">Sm</p>
-					<p class="elem_mass">62</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">151,965</p>
-					<p class="elem_symb">Eu</p>
-					<p class="elem_mass">63</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">157,25</p>
-					<p class="elem_symb">Gd</p>
-					<p class="elem_mass">64</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">158,92534</p>
-					<p class="elem_symb">Tb</p>
-					<p class="elem_mass">65</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">162,5</p>
-					<p class="elem_symb">Dy</p>
-					<p class="elem_mass">66</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">164,93032</p>
-					<p class="elem_symb">Ho</p>
-					<p class="elem_mass">67</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">167,26</p>
-					<p class="elem_symb">Er</p>
-					<p class="elem_mass">68</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">168,93421</p>
-					<p class="elem_symb">Tm</p>
-					<p class="elem_mass">69</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">173,04</p>
-					<p class="elem_symb">Yb</p>
-					<p class="elem_mass">70</p>
-				</div>
-			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">174,967</p>
-					<p class="elem_symb">Lu</p>
-					<p class="elem_mass">71</p>
-				</div>
+			<td class="elem color_blue"  contenteditable>
+				<p class="elem_numb">294</p>
+				<p class="elem_symb">Og</p>
+				<p class="elem_mass">118</p>
 			</td>
         </tr>
         <tr>
             <td colspan="3" class="hidden_cells"></td>
-            <td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">227,0278</p>
-					<p class="elem_symb">Ac</p>
-					<p class="elem_mass">89</p>
-				</div>
+        </tr>
+        <tr>
+            <td colspan="3" class="hidden_cells"></td>
+            <td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">138,9055</p>
+				<p class="elem_symb">La</p>
+				<p class="elem_mass">57</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">232,0381</p>
-					<p class="elem_symb">Th</p>
-					<p class="elem_mass">90</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">140,115</p>
+				<p class="elem_symb">Ce</p>
+				<p class="elem_mass">58</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">231,0359</p>
-					<p class="elem_symb">Pa</p>
-					<p class="elem_mass">91</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">140,90765</p>
+				<p class="elem_symb">Pr</p>
+				<p class="elem_mass">59</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">238,0289</p>
-					<p class="elem_symb">U</p>
-					<p class="elem_mass">92</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">144,24</p>
+				<p class="elem_symb">Nd</p>
+				<p class="elem_mass">60</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">237,0482</p>
-					<p class="elem_symb">Np</p>
-					<p class="elem_mass">93</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">146,9151</p>
+				<p class="elem_symb">Pm</p>
+				<p class="elem_mass">61</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">244,0642</p>
-					<p class="elem_symb">Pu</p>
-					<p class="elem_mass">94</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">150,36</p>
+				<p class="elem_symb">Sm</p>
+				<p class="elem_mass">62</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">243,0614</p>
-					<p class="elem_symb">Am</p>
-					<p class="elem_mass">95</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">151,965</p>
+				<p class="elem_symb">Eu</p>
+				<p class="elem_mass">63</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">247,0703</p>
-					<p class="elem_symb">Cm</p>
-					<p class="elem_mass">96</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">157,25</p>
+				<p class="elem_symb">Gd</p>
+				<p class="elem_mass">64</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">247,0703</p>
-					<p class="elem_symb">Bk</p>
-					<p class="elem_mass">97</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">158,92534</p>
+				<p class="elem_symb">Tb</p>
+				<p class="elem_mass">65</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">251,0796</p>
-					<p class="elem_symb">Cf</p>
-					<p class="elem_mass">98</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">162,5</p>
+				<p class="elem_symb">Dy</p>
+				<p class="elem_mass">66</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">252,0829</p>
-					<p class="elem_symb">Es</p>
-					<p class="elem_mass">99</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">164,93032</p>
+				<p class="elem_symb">Ho</p>
+				<p class="elem_mass">67</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">257,0951</p>
-					<p class="elem_symb">Fm</p>
-					<p class="elem_mass">100</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">167,26</p>
+				<p class="elem_symb">Er</p>
+				<p class="elem_mass">68</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">258,0986</p>
-					<p class="elem_symb">Md</p>
-					<p class="elem_mass">101</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">168,93421</p>
+				<p class="elem_symb">Tm</p>
+				<p class="elem_mass">69</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">259,1009</p>
-					<p class="elem_symb">No</p>
-					<p class="elem_mass">102</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">173,04</p>
+				<p class="elem_symb">Yb</p>
+				<p class="elem_mass">70</p>
 			</td>
-			<td>
-				<div class="elem color_beige"  contenteditable>
-					<p class="elem_numb">260,1053</p>
-					<p class="elem_symb">Lr</p>
-					<p class="elem_mass">103</p>
-				</div>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">174,967</p>
+				<p class="elem_symb">Lu</p>
+				<p class="elem_mass">71</p>
+			</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="hidden_cells"></td>
+            <td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">227,0278</p>
+				<p class="elem_symb">Ac</p>
+				<p class="elem_mass">89</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">232,0381</p>
+				<p class="elem_symb">Th</p>
+				<p class="elem_mass">90</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">231,0359</p>
+				<p class="elem_symb">Pa</p>
+				<p class="elem_mass">91</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">238,0289</p>
+				<p class="elem_symb">U</p>
+				<p class="elem_mass">92</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">237,0482</p>
+				<p class="elem_symb">Np</p>
+				<p class="elem_mass">93</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">244,0642</p>
+				<p class="elem_symb">Pu</p>
+				<p class="elem_mass">94</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">243,0614</p>
+				<p class="elem_symb">Am</p>
+				<p class="elem_mass">95</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">247,0703</p>
+				<p class="elem_symb">Cm</p>
+				<p class="elem_mass">96</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">247,0703</p>
+				<p class="elem_symb">Bk</p>
+				<p class="elem_mass">97</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">251,0796</p>
+				<p class="elem_symb">Cf</p>
+				<p class="elem_mass">98</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">252,0829</p>
+				<p class="elem_symb">Es</p>
+				<p class="elem_mass">99</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">257,0951</p>
+				<p class="elem_symb">Fm</p>
+				<p class="elem_mass">100</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">258,0986</p>
+				<p class="elem_symb">Md</p>
+				<p class="elem_mass">101</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">259,1009</p>
+				<p class="elem_symb">No</p>
+				<p class="elem_mass">102</p>
+			</td>
+			<td class="elem color_beige"  contenteditable>
+				<p class="elem_numb">260,1053</p>
+				<p class="elem_symb">Lr</p>
+				<p class="elem_mass">103</p>
 			</td>
         </tr>
     </table>
 </body>
 </html>
-
